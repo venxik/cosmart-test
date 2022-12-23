@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Themed test renders Text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#000",
+      },
+      undefined,
+    ]
+  }
+>
+  Snapshot test!
+</Text>
+`;
+
+exports[`Themed test renders View correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#2f95dc",
+      },
+      undefined,
+    ]
+  }
+>
+  Snapshot test!
+</View>
+`;

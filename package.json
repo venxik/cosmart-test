@@ -10,13 +10,43 @@
     "test": "jest --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "@testing-library/react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/assets/",
+      "<rootDir>/src/navigation/",
+      "<rootDir>/src/constants/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/assets/",
+      "<rootDir>/src/navigation/",
+      "<rootDir>/src/constants/"
+    ],
+    "clearMocks": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js",
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "coverageDirectory": ".coverage"
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@react-native-community/datetimepicker": "6.5.2",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "expo": "~47.0.9",
     "expo-asset": "~8.7.0",
     "expo-constants": "~14.0.2",
@@ -31,16 +61,30 @@
     "react-native": "0.70.5",
     "react-native-safe-area-context": "4.4.1",
     "react-native-screens": "~3.18.0",
-    "react-native-web": "~0.18.9"
+    "react-native-web": "~0.18.9",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@testing-library/jest-native": "^5.3.3",
+    "@testing-library/react-native": "^11.5.0",
+    "@types/jest": "^29.2.4",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint": "^8.30.0",
+    "eslint-config-universe": "^11.1.1",
     "jest": "^26.6.3",
-    "jest-expo": "~47.0.1",
+    "jest-expo": "^47.0.1",
+    "jest-fetch-mock": "^3.0.3",
+    "prettier": "^2.8.1",
     "react-test-renderer": "18.1.0",
     "typescript": "^4.6.3"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "extends": "universe/native"
+  }
 }
