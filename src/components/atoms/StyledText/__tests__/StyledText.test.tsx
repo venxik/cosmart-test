@@ -1,9 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { MonoText } from '../StyledText';
+import { renderWithProviders } from '../../../../__mocks__';
 
-it(`renders correctly`, () => {
-  const tree = renderer.create(<MonoText>Snapshot test!</MonoText>).toJSON();
+describe('StyledText', () => {
+  it(`match snapshot`, () => {
+    const tree = renderWithProviders(<MonoText>Snapshot test!</MonoText>).toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -54,26 +54,40 @@ export default function ModalScreen() {
         <View>
           <View style={styles.textContainer}>
             <Text style={styles.title}>Title:</Text>
-            <MonoText style={styles.contentText}>{title}</MonoText>
+            <MonoText style={styles.contentText} testID={'text_title'}>
+              {title}
+            </MonoText>
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.title}>Author:</Text>
-            <MonoText style={styles.contentText}>{authors[0].name}</MonoText>
+            <MonoText style={styles.contentText} testID={'text_author'}>
+              {authors[0].name}
+            </MonoText>
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.title}>Edition:</Text>
-            <MonoText style={styles.contentText}>{edition_count}</MonoText>
+            <MonoText style={styles.contentText} testID={'text_edition'}>
+              {edition_count}
+            </MonoText>
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.title}>Selected Date: </Text>
-            <MonoText style={styles.contentText}>{getDate(date.toISOString())}</MonoText>
+            <MonoText style={styles.contentText} testID={'text_date'}>
+              {getDate(date.toISOString())}
+            </MonoText>
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Select Appointment Date" onPress={showDatepicker} />
+            <Button
+              title="Select Appointment Date"
+              onPress={showDatepicker}
+              testID={'button_show_date_picker'}
+            />
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.title}>Selected Time: </Text>
-            <MonoText style={styles.contentText}>{getTime(date.toISOString())}</MonoText>
+            <MonoText style={styles.contentText} testID={'text_time'}>
+              {getTime(date.toISOString())}
+            </MonoText>
           </View>
           <Button title="Select Appointment Time" onPress={showTimepicker} />
           {show && (
@@ -88,7 +102,7 @@ export default function ModalScreen() {
             </View>
           )}
         </View>
-        <Button title="Add to Booking List" onPress={onPressAddToBooking} />
+        <Button title="Add to Booking List" onPress={onPressAddToBooking} testID={'button_add'} />
       </View>
     </ScrollView>
   );

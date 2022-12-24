@@ -1,17 +1,21 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Text, View } from '../Themed';
+import { renderWithProviders } from '../../../../__mocks__';
 
 describe(`Themed test`, () => {
-  it(`renders Text correctly`, () => {
-    const tree = renderer.create(<Text>Snapshot test!</Text>).toJSON();
+  describe('Text', () => {
+    it(`match snapshot`, () => {
+      const tree = renderWithProviders(<Text>Snapshot test!</Text>).toJSON();
 
-    expect(tree).toMatchSnapshot();
+      expect(tree).toMatchSnapshot();
+    });
   });
 
-  it(`renders View correctly`, () => {
-    const tree = renderer.create(<View>Snapshot test!</View>).toJSON();
+  describe('View', () => {
+    it(`match snapshot`, () => {
+      const tree = renderWithProviders(<View>Snapshot test!</View>).toJSON();
 
-    expect(tree).toMatchSnapshot();
+      expect(tree).toMatchSnapshot();
+    });
   });
 });

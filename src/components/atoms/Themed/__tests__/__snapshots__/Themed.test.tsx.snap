@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Themed test renders Text correctly 1`] = `
+exports[`Themed test Text match snapshot 1`] = `
 <Text
   style={
     Array [
@@ -15,7 +15,7 @@ exports[`Themed test renders Text correctly 1`] = `
 </Text>
 `;
 
-exports[`Themed test renders View correctly 1`] = `
+exports[`Themed test View match snapshot 1`] = `
 <View
   style={
     Array [

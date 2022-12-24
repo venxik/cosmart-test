@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabOneScreen match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#2f95dc",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "authors": Array [
+            Object {
+              "key": "/authors/OL4327048A",
+              "name": "Emily Brontë",
+            },
+          ],
+          "bookingDate": "1234",
+          "edition_count": 123,
+          "has_fulltext": true,
+          "ia": "testing",
+          "key": "testing",
+          "title": "testing",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderColor": "#2f95dc",
+              },
+              Object {
+                "borderRadius": 37.5,
+                "borderWidth": 1,
+                "marginBottom": 37.5,
+                "marginHorizontal": 15,
+                "padding": 37.5,
+              },
+            ]
+          }
+          testID="book_item"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2f95dc",
+                },
+                Object {
+                  "marginBottom": 30,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "fontSize": 45,
+                    "fontWeight": "700",
+                  },
+                ]
+              }
+            >
+              Title
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 37.5,
+                      "fontWeight": "300",
+                    },
+                    Object {
+                      "fontFamily": "space-mono",
+                    },
+                  ],
+                ]
+              }
+            >
+              testing
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2f95dc",
+                },
+                Object {
+                  "marginBottom": 30,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "fontSize": 45,
+                    "fontWeight": "700",
+                  },
+                ]
+              }
+            >
+              Author
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 37.5,
+                      "fontWeight": "300",
+                    },
+                    Object {
+                      "fontFamily": "space-mono",
+                    },
+                  ],
+                ]
+              }
+            >
+              Emily Brontë
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2f95dc",
+                },
+                undefined,
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "fontSize": 45,
+                    "fontWeight": "700",
+                  },
+                ]
+              }
+            >
+              Edition Number
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 37.5,
+                      "fontWeight": "300",
+                    },
+                    Object {
+                      "fontFamily": "space-mono",
+                    },
+                  ],
+                ]
+              }
+            >
+              123
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderColor": "#2f95dc",
+                },
+                Object {
+                  "marginTop": 10,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityRole="button"
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              testID="button_book_item_testing"
+            >
+              <View
+                style={
+                  Array [
+                    Object {},
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#007AFF",
+                        "fontSize": 18,
+                        "margin": 8,
+                        "textAlign": "center",
+                      },
+                    ]
+                  }
+                >
+                  Click Here to Book!
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

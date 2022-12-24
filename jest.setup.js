@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-import '@testing-library/jest-native/extend-expect';
-
 import * as ReactNative from 'react-native';
 
-require('jest-fetch-mock').enableMocks();
+import 'cross-fetch/polyfill';
+import fetchMock from 'jest-fetch-mock';
+import '@testing-library/jest-native/extend-expect';
+
+fetchMock.enableMocks();
 
 jest.doMock('react-native', () => {
   return Object.setPrototypeOf(

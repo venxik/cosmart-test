@@ -10,7 +10,7 @@ export default memo(function BookedItemList() {
 
   const renderItem = ({ item }: { item: BookingInformation }) => {
     return (
-      <View style={styles.itemContainer}>
+      <View style={styles.itemContainer} testID={'booking_item_list'}>
         <View style={styles.textContainer}>
           <Text style={styles.textHeader}>Title</Text>
           <MonoText style={styles.textContent}>{item.title}</MonoText>
@@ -37,7 +37,7 @@ export default memo(function BookedItemList() {
 
   const renderEmpty = () => {
     return (
-      <View style={styles.emptyContainer}>
+      <View style={styles.emptyContainer} testID={'empty_container'}>
         <Text style={styles.textHeader}>Booking List is Empty</Text>
       </View>
     );

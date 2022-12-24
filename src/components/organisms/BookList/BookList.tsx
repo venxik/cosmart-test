@@ -5,19 +5,22 @@ import { useGetLoveSubjectsQuery } from '../../../services';
 import { MonoText, Text, View } from '../../atoms';
 import { SCREEN_WIDTH } from '../../../utils';
 import { useCallback } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { RootTabNavigationProps } from '../../../navigation';
 
-type BookListProps = {
-  onPressItem: (item: WorkDetails) => void;
-};
-
-export default memo(function BookList(props: BookListProps) {
-  const { onPressItem } = props;
+export default memo(function BookList() {
   const { data } = useGetLoveSubjectsQuery();
+
+  const { navigate } = useNavigation<RootTabNavigationProps<'TabOne'>>();
+
+  const onPressItem = (item: WorkDetails) => {
+    navigate('Modal', item);
+  };
 
   const renderItem = useCallback(
     ({ item }: { item: WorkDetails }) => {
       return (
-        <View style={styles.itemContainer}>
+        <View style={styles.itemContainer} testID="book_item">
           <View style={styles.textContainer}>
             <Text style={styles.textHeader}>Title</Text>
             <MonoText style={styles.textContent}>{item.title}</MonoText>
@@ -31,7 +34,11 @@ export default memo(function BookList(props: BookListProps) {
             <MonoText style={styles.textContent}>{item.edition_count}</MonoText>
           </View>
           <View style={styles.buttonContainer}>
-            <Button title="Click Here to Book!" onPress={() => onPressItem(item)} />
+            <Button
+              title="Click Here to Book!"
+              onPress={() => onPressItem(item)}
+              testID={`button_book_item_${item.key}`}
+            />
           </View>
         </View>
       );
